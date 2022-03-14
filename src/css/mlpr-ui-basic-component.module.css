@@ -1,0 +1,843 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root {
+    --primary-color: #082032;
+    --hover-color: #183042;
+    --active-color: #3a4d5a;
+    --overlay-color: #02020266;
+}
+::selection {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.mlprLogoFont {
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+/* animation name */
+@keyframes loading-primary {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes button-skeleton-animation-primary {
+    100% {
+        background-position: -100% 0;
+    }
+}
+/* animation name */
+
+/* body */
+.mlprBodyBackground {
+    background: #f5f4f4;
+}
+.mlprBodyForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+/* body */
+
+/* box */
+.mlprBoxNormalBackgroundPrimary {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 2px 10px #e4e4e4;
+}
+.mlprBoxNormalBackgroundPrimary.noBoxShadow {
+    box-shadow: none;
+}
+.mlprBoxSkeletonNormalAnimationPrimary {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 2px 10px #e4e4e4;
+    background: linear-gradient(
+        120deg, #fff 30%,
+        #f6f6f6 38%,
+        #f6f6f6 40%,
+        #fff 48%
+    );
+    background-size:  200% 100%;
+    background-position: 100% 0;
+    animation: button-skeleton-animation-primary 4s infinite;
+}
+/* box */
+
+/* overlay */
+.mlprOverlay {
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--overlay-color);
+    transition: all .3s ease;
+}
+.mlprOverlay.unactive {
+    opacity: 0;
+    pointer-events: none;
+}
+/* overlay */
+
+/* input box */
+.inputBoxNormalPrimary {
+    border: .1rem solid #d6d6d6;
+    border-radius: 4px;
+    padding: 0 15px;
+}
+.inputBoxNormalHoverPrimary:hover {
+    border: .1rem solid #b9b9b9;
+}
+.inputBoxNormalFocusPrimary:focus {
+    border: .1rem solid var(--primary-color);
+}
+/* input box */
+
+/* textarea box */
+.textareaBoxNormalPrimary {
+    border: .1rem solid #d6d6d6;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+.textareaBoxNormalPrimary.resizeNone {
+    resize: none;
+}
+.textareaBoxNormalHoverPrimary:hover {
+    border: .1rem solid #c0c0c0;
+}
+.textareaBoxNormalFocusPrimary:focus {
+    border: .1rem solid var(--primary-color);
+}
+/* textarea box */
+
+/* button */
+.buttonNormalPrimary {
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+.buttonLikePrimary {
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    background: #ff3657;
+}
+.buttonWarningPrimary {
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    background: #ff0000;
+}
+.buttonSuccessPrimary {
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    background: #00f600;
+}
+.buttonNormalHoverPrimary:hover {
+    background: var(--hover-color);
+}
+.buttonNormalActivePrimary:active {
+    background: var(--active-color);
+}
+.buttonLikeHoverPrimary:hover {
+    background: #ff4564;
+}
+.buttonLikeActivePrimary:active {
+    background: #ff5874;
+}
+.buttonWarningHoverPrimary:hover {
+    background: #ff2929;
+}
+.buttonWarningActivePrimary:active {
+    background: #ff4343;
+}
+.buttonSuccessHoverPrimary:hover {
+    background: #0cfa0c;
+}
+.buttonSuccessActivePrimary:active {
+    background: #31ff31;
+}
+/* button skeleton animation */
+.buttonSkeletonNormalAnimationPrimary {
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(
+        120deg, var(--primary-color) 30%,
+        #15354e 38%,
+        #15354e 40%,
+        var(--primary-color) 48%
+    );
+    background-size:  200% 100%;
+    background-position: 100% 0;
+    animation: button-skeleton-animation-primary 4s infinite;
+}
+.button-skeleton-likeAnimationPrimary {
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(
+        120deg, #ff3657 30%,
+        #ff5e78 38%,
+        #ff5e78 40%,
+        #ff3657 48%
+    );
+    background-size:  200% 100%;
+    background-position: 100% 0;
+    animation: button-skeleton-animation-primary 4s infinite;
+}
+.buttonSkeletonSuccessAnimationPrimary {
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(
+        120deg, #00f600 30%,
+        #5cff5c 38%,
+        #5cff5c 40%,
+        #00f600 48%
+    );
+    background-size:  200% 100%;
+    background-position: 100% 0;
+    animation: button-skeleton-animation-primary 1.5s infinite;
+}
+.buttonSkeletonWarningAnimationPrimary {
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(
+        120deg, #ff0000 30%,
+        #ff4242 38%,
+        #ff4242 40%,
+        #ff0000 48%
+    );
+    background-size:  200% 100%;
+    background-position: 100% 0;
+    animation: button-skeleton-animation-primary 4s infinite;
+}
+/* button skeleton animation */
+.buttonNormalDisabledPrimary {
+    pointer-events: none;
+    color: #ffffffe3;
+    background: #e6e6e6;
+    border: none;
+    border-radius: 4px;
+}
+/* button */
+
+/* toggle button */
+.toggleButtonNormalPrimary {
+    position: relative;
+    width: 40px;
+    height: 23px;
+    border-radius: 2rem;
+    background: #fff;
+}
+.toggleButtonNormalPrimary .toggle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 10%;
+    top: 50%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #e6e6e6;
+    transition: all .2s ease;
+}
+.toggleButtonNormalPrimary.active .toggle {
+    left: 90%;
+    background: #57ff57;
+}
+/* toggle button */
+
+/* messages text */
+.messagesText {
+    padding: 11px 11px;
+    border-radius: 4px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.messagesText i, .messagesText ion-icon {
+    font-size: 1.2rem;
+    margin: 0 .5rem;
+}
+.messagesText .content {
+    margin-bottom: 0;
+}
+.messagesText.warning {
+    background: #ffe4c4;
+    color: #ff802c;
+}
+.messagesText.success {
+    background: #cfffcf;
+    color: #00b300;
+}
+.messagesText.info {
+    background: #bff0ff;
+    color: #00aeff;
+}
+.messagesText.active {
+    display: flex;
+}
+/* messages text */
+
+/* image */
+.imageCover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.objectFitCover {
+    object-fit: cover;
+}
+.objectFitContain {
+    object-fit: contain;
+}
+.imageDragNone {
+    -webkit-user-drag: none;
+}
+/* image */
+
+/* line */
+.lineHaveContent::before {
+    position: absolute;
+    content: "";
+    transform: translateY(-50%);
+    left: 0;
+    top: 50%;
+    width: 45%;
+    height: .7px;
+    background: #d6d6d6;
+}
+.lineHaveContent::after {
+    position: absolute;
+    content: "";
+    transform: translateY(-50%);
+    right: 0;
+    top: 50%;
+    width: 45%;
+    height: .7px;
+    background: #d6d6d6;
+}
+.lineNoContent {
+    width: 100%;
+    height: .7px;
+    background: #d6d6d6;
+}
+/* line */
+
+/* border */
+.borderNormalPrimary {
+    border: .1rem solid #d6d6d6;
+}
+/* border */
+
+/* a tag */
+.aTagNormalVarious-buttonPrimary {
+    border: .1rem solid #d6d6d6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+}
+.aTagNormalVarious-button-hoverPrimary:hover {
+    background: #fbfbfb;
+    color: #000;
+}
+.aTagTextNormalHaveTdcrtPrimary {
+    color: #000;
+    text-decoration: underline;
+}
+.aTagTextNormalNoTdcrtPrimary {
+    color: #000;
+    text-decoration: none;
+}
+.aTagTextNormalHoverPrimary:hover {
+    letter-spacing: .1rem;
+    color: #000;
+}
+/* a tag */
+
+/* special hover */
+.mlprSpecialHoverNormalPrimary:hover {
+    letter-spacing: .1rem;
+}
+/* special hover */
+
+/* loading */
+.loadingPrimary {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: .3rem solid #00000000;
+    border-top: .3rem solid var(--primary-color);
+    border-left: .3rem solid var(--primary-color);
+    border-right: .3rem solid var(--primary-color);
+    animation: loading-primary 1s linear infinite;
+    margin: auto;
+}
+.loadingPrimary.light {
+    border-top: .3rem solid #fff;
+    border-left: .3rem solid #fff;
+    border-right: .3rem solid #fff;
+}
+/* loading */
+
+/* webkit appearance */
+.webkitApperanceNone {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+/* webkit appearance */
+
+/* hidden work box  */
+.hiddenWorkBox {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -100%;
+    transition: all .3s ease;
+    border-radius: 4px;
+    z-index: 1001;
+}
+.hiddenWorkBox.active {
+    top: 50%;
+}
+/* hidden work box  */
+
+/* color */
+.color000 {
+    color: #000;
+}
+.color555 {
+    color: #555;
+}
+/* color */
+
+/* select */
+.selectBoxNoArrow {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+/* select */
+
+/* transition */
+.transitionDot1S {
+    transition: all .1s ease;
+}
+.transitionDot2S {
+    transition: all .2s ease;
+}
+.transitionDot3S {
+    transition: all .3s ease;
+}
+.transitionDot4S {
+    transition: all .4s ease;
+}
+.transitionDot5S {
+    transition: all .5s ease;
+}
+.transitionDot6S {
+    transition: all .6s ease;
+}
+.transitionDot7S {
+    transition: all .7s ease;
+}
+.transitionDot8S {
+    transition: all .8s ease;
+}
+.transitionDot9S {
+    transition: all .9s ease;
+}
+.transition1S {
+    transition: all 1s ease;
+}
+/* transition */
+
+/* pointer event */
+.pointerEventsNone {
+    pointer-events: none;
+}
+.pointerEventsAuto {
+    pointer-events: auto;
+}
+/* pointer event */
+
+/* font size */
+.fontSizedDt1-Rm {
+    font-size: .1rem;
+}
+.fontSizedDt2-Rm {
+    font-size: .2rem;
+}
+.fontSizedDt3-Rm {
+    font-size: .3rem;
+}
+.fontSizedDt4-Rm {
+    font-size: .4rem;
+}
+.fontSizedDt5-Rm {
+    font-size: .5rem;
+}
+.fontSizedDt6-Rm {
+    font-size: .6rem;
+}
+.fontSizedDt7-Rm {
+    font-size: .7rem;
+}
+.fontSizedDt8-Rm {
+    font-size: .8rem;
+}
+.fontSizedDt9-Rm {
+    font-size: .9rem;
+}
+.fontSize1Rem {
+    font-size: 1rem;
+}
+.fontSize1Dot1Rem {
+    font-size: 1.1rem;
+}
+.font-size-1dot2-rem {
+    font-size: 1.2rem;
+}
+.fontSize1Dot3Rem {
+    font-size: 1.3rem;
+}
+.fontSize1Dot4Rem {
+    font-size: 1.4rem;
+}
+.fontSize1Dot5Rem {
+    font-size: 1.5rem;
+}
+.fontSize1Dot6Rem {
+    font-size: 1.6rem;
+}
+.fontSize1Dot7Rem {
+    font-size: 1.7rem;
+}
+.fontSize1Dot8Rem {
+    font-size: 1.8rem;
+}
+.fontSize1Dot9Rem {
+    font-size: 1.9rem;
+}
+.fontSize2Rem {
+    font-size: 2rem;
+}
+/* font size */
+
+/* font weight */
+.fontWeight500 {
+    font-weight: 500;
+}
+.fontWeight550 {
+    font-weight: 550
+}
+.fontWeight650 {
+    font-weight: 650
+}
+.fontWeight700 {
+    font-weight: 700
+}
+/* font weight */
+
+/* cursor */
+.cursorPointer {
+    cursor: pointer;
+}
+.cursorNoDrop {
+    cursor: no-drop;
+}
+/* cursor */
+
+/* width */
+.width15Px {
+    width: 15px;
+}
+.width20Px {
+    width: 20px;
+}
+.width25Px {
+    width: 25px;
+}
+.width30Px {
+    width: 30px;
+}
+.width35Px {
+    width: 35px;
+}
+.width40Px {
+    width: 40px;
+}
+.width45Px {
+    width: 45px;
+}
+.width50Px {
+    width: 50px;
+}
+.width55Px {
+    width: 55px;
+}
+.width65Px {
+    width: 65px;
+}
+.width70Px {
+    width: 70px;
+}
+.width75Px {
+    width: 75px;
+}
+.width80Px {
+    width: 80px;
+}
+.width85Px {
+    width: 85px;
+}
+.width90Px {
+    width: 90px;
+}
+.width95Px {
+    width: 95px;
+}
+.width100Px {
+    width: 100px;
+}
+.width105Px {
+    width: 105px;
+}
+.width110Px {
+    width: 110px;
+}
+.width115Px {
+    width: 115px;
+}
+.width120Px {
+    width: 120px;
+}
+.width125Px {
+    width: 125px;
+}
+.width130Px {
+    width: 130px;
+}
+.width135Px {
+    width: 135px;
+}
+.width140Px {
+    width: 140px;
+}
+.width145Px {
+    width: 145px;
+}
+.width150Px {
+    width: 150px;
+}
+.width200Px {
+    width: 200px;
+}
+.width250Px {
+    width: 250px;
+}
+.width300Px {
+    width: 300px;
+}
+.width350Px {
+    width: 350px;
+}
+.width400Px {
+    width: 400px;
+}
+.width450Px {
+    width: 450px;
+}
+.width500Px {
+    width: 500px;
+}
+.width550Px {
+    width: 550px;
+}
+.width600Px {
+    width: 600px;
+}
+.width650Px {
+    width: 650px;
+}
+.width700Px {
+    width: 700px;
+}
+/* width */
+
+/* height */
+.height15Px {
+    height: 15px;
+}
+.height20Px {
+    height: 20px;
+}
+.height25Px {
+    height: 25px;
+}
+.height30Px {
+    height: 30px;
+}
+.height35Px {
+    height: 35px;
+}
+.height40Px {
+    height: 40px;
+}
+.height45Px {
+    height: 45px;
+}
+.height50Px {
+    height: 50px;
+}
+.height55Px {
+    height: 55px;
+}
+.height65Px {
+    height: 65px;
+}
+.height70Px {
+    height: 70px;
+}
+.height75Px {
+    height: 75px;
+}
+.height80Px {
+    height: 80px;
+}
+.height85Px {
+    height: 85px;
+}
+.height90Px {
+    height: 90px;
+}
+.height95Px {
+    height: 95px;
+}
+.height100Px {
+    height: 100px;
+}
+.height105Px {
+    width: 105px;
+}
+.height110Px {
+    height: 110px;
+}
+.height115Px {
+    height: 115px;
+}
+.height120Px {
+    height: 120px;
+}
+.height125Px {
+    height: 125px;
+}
+.height130Px {
+    height: 130px;
+}
+.height135Px {
+    height: 135px;
+}
+.height140Px {
+    height: 140px;
+}
+.height145Px {
+    height: 145px;
+}
+.height150Px {
+    height: 150px;
+}
+.height200Px {
+    height: 200px;
+}
+.height250Px {
+    height: 250px;
+}
+.height300Px {
+    height: 300px;
+}
+.height350Px {
+    height: 350px;
+}
+.height400Px {
+    height: 400px;
+}
+.height450Px {
+    height: 450px;
+}
+.height500Px {
+    height: 500px;
+}
+.height550Px {
+    height: 550px;
+}
+.height600Px {
+    height: 600px;
+}
+.height650Px {
+    height: 650px;
+}
+.height700Px {
+    height: 700px;
+}
+/* height */
+
+/* box-shadow */
+.boxShadowLevel1 {
+    box-shadow: 1px 2px 10px #f3f3f3;
+}
+.boxShadowLevel2 {
+    box-shadow: 1px 2px 10px #eeeeee;
+}
+.boxShadowLevel3 {
+    box-shadow: 1px 2px 10px #e4e4e4;
+}
+.boxShadowLevel4 {
+    box-shadow: 1px 2px 10px #dbdbdb;
+}
+.boxShadowLevel5 {
+    box-shadow: 1px 2px 10px #d6d6d6;
+}
+.boxShadowNone {
+    box-shadow: none;
+}
+/* box-shadow */
+
+/* border-radius */
+.borderRadiusLevel1 {
+    border-radius: 4px;
+}
+.borderRadiusLevel2 {
+    border-radius: 8px;
+}
+.borderRadiusLevel3 {
+    border-radius: 12px;
+}
+.borderRadiusLevel4 {
+    border-radius: 16px;
+}
+.borderRadiusLevel5 {
+    border-radius: 2rem;
+}
+/* border-radius */
+

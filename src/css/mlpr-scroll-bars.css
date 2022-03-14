@@ -1,0 +1,18 @@
+:root {
+  --overlay-color: #02020266;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--overlay-color);
+  border-radius: 4px;
+  transition: all .1s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #02020271;
+}

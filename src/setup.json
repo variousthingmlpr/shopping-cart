@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "image": "image/laptop-1.avif",
+    "name": "Macbook 1",
+    "price": 5000,
+    "description": "This laptop is very good, laptop name is Macbook 1"
+  },
+  {
+    "id": 2,
+    "image": "image/laptop-2.webp",
+    "name": "Macbook 2",
+    "price": 5100,
+    "description": "This laptop is very good, laptop name is Macbook 2"
+  },
+  {
+    "id": 3,
+    "image": "image/laptop-3.jpg",
+    "name": "Macbook 3",
+    "price": 5200,
+    "description": "This laptop is very good, laptop name is Macbook 3"
+  },
+  {
+    "id": 4,
+    "image": "image/laptop-4.avif",
+    "name": "Macbook 4",
+    "price": 5300,
+    "description": "This laptop is very good, laptop name is Macbook 4"
+  },
+  {
+    "id": 5,
+    "image": "image/laptop-5.avif",
+    "name": "Macbook 5",
+    "price": 5400,
+    "description": "This laptop is very good, laptop name is Macbook 5"
+  },
+  {
+    "id": 6,
+    "image": "image/laptop-6.png",
+    "name": "Macbook 6",
+    "price": 5500,
+    "description": "This laptop is very good, laptop name is Macbook 6"
+  }
+]
